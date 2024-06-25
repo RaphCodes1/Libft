@@ -1,18 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 13:51:15 by rcreer            #+#    #+#             */
+/*   Updated: 2024/06/25 17:49:30 by rcreer           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int sign;
-    char c;
-
-    sign = 1;
-    if(n < 0)
-    {
-        ft_putchar_fd('-',fd);
-        sign =- -1;
-    }
-    if(n / 10)
-        ft_putnbr_fd(n / 10 * sign, fd);
-    c = '0' - n % 10 * sign;
-    ft_putchar_fd(c,fd);
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putchar_fd((n % 10 + '0'), fd);
+	}
+	else
+		ft_putchar_fd((n + '0'), fd);
 }
+
+// int main(void)
+// {
+//     ft_putnbr_fd(12345,1);
+//     return 0;
+// }

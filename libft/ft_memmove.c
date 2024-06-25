@@ -1,42 +1,42 @@
-#include "libft.h"
-// #include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 16:53:22 by rcreer            #+#    #+#             */
+/*   Updated: 2024/06/25 17:41:26 by rcreer           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	i;
 
-	if(!dest || !src)
+	if (!dest || !src)
 	{
 		return (NULL);
 	}
-	if(dest > src)
+	if (dest > src)
 	{
 		i = (int)n - 1;
-		while(i >= 0)
+		while (i >= 0)
 		{
-			*(char*)(dest + i) = *(char*)(src + i);
+			*(char *)(dest + i) = *(char *)(src + i);
 			i--;
 		}
 	}
 	else
 	{
 		i = 0;
-		while(i < (int)n)
+		while (i < (int)n)
 		{
-			*(char*)(dest + i) = *(char*)(src + i);
-			i++;  
+			*(char *)(dest + i) = *(char *)(src + i);
+			i++;
 		}
 	}
-	return (dest); 
-	
+	return (dest);
 }
-
-// int main(void)
-// {
-// 	char *s1 = "Hello World Raph";
-// 	char s2[20];
-
-// 	copykakashi(s2,s1,sizeof(s2));
-
-// 	printf("%s\n",s2);
-// }
