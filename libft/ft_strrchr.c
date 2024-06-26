@@ -11,22 +11,32 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <string.h>
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	i = ft_strlen(s) - 1;
-	while (i > 0)
+	int	i;
+	char *res;
+	
+	i = 0;
+	res = NULL;
+	
+	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-			break ;
-		}
-		i--;
+			res = (char *)(s + i);
+		i++;
 	}
-	return (NULL);
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
+	return (res);
 }
+
+// int main()
+// {
+// 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+//  	char *d1 = strrchr(src, 'c');
+//  	char *d2 = ft_strrchr(src, 'c');
+ 
+//  	printf("%s\n%s",d1,d2);
+
+// }

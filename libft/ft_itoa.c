@@ -30,7 +30,7 @@ char	*ft_itoa(int n)
 	char		*res;
 	const char	*num;
 
-	if (n == -2147483648)
+	if (n == -214748364 - 1)
 		return ("-2147483648");
 	num = "0123456789";
 	len = ft_numlen(n, 10);
