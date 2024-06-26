@@ -11,19 +11,27 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*ft_memset(void *s, int c, size_t n)
-{
+#include <string.h>
+void	*ft_memset(void *b, int c, size_t len)
+{	
+	void *hold;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
+	hold = b;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		*(unsigned char *)(s + i) = (char)c;
+		*(char *)(b + i) = (unsigned char)c;
 		i++;
 	}
-	*(unsigned char *)(s + i) = '\0';
-	return (s);
+	return (hold);
 }
+
+// int main()
+// {	
+// 	char mem[100];
+// 	if (mem != ft_memset(mem, '\n', 6))
+//         write(1, "mem's adress was not returned\n", 30);
+//     write(1, mem, 15);
+
+// }

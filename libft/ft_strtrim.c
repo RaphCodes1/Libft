@@ -11,28 +11,38 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+int length_i(char const *s1, char const *set, size_t i)
 {
-	size_t		i;
-	size_t		j;
-	size_t		k;
-	size_t		l;
-	char		*rem;
-
-	if (!s1 || !set)
-		return (NULL);
-	rem = (char *)malloc(sizeof(char) * (ft_strlen(s1)));
-	if (!rem)
-		return (NULL);
-	i = 0;
 	while (s1[i])
 	{
 		if (s1[i] == set[0])
 			break ;
 		i++;
 	}
-	k = i;
+	return (i);
+}
+char *mal_func(char const *s1, char const *set)
+{	
+	char *rem;
+	if (!s1 || !set)
+		return (NULL);
+	rem = (char *)malloc(sizeof(char) * (ft_strlen(s1)));
+	if (!rem)
+		return (NULL);
+	return (rem);
+}
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t		j;
+	size_t		k;
+	size_t		l;
+	char		*rem;
+
+	rem = mal_func(s1,set);
+	l = 0;
+	k = length_i(s1, set, l);
 	while (s1[k])
 	{
 		if (s1[k] == set[(ft_strlen(set) - 1)])
@@ -40,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		k++;
 	}
 	l = 0;
-	while (l < i)
+	while (l < (k - 1))
 	{
 		rem[l] = s1[l];
 		l++;
@@ -48,10 +58,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = 0;
 	k++;
 	while (s1[k])
-	{
-		rem[l + j] = s1[k];
-		k++;
-		j++;
-	}
+		rem[l + j++] = s1[k++];
 	return (rem);
 }
+
+
+// int main()
+// {
+// 	char *s1 = "Hello World There";
+// 	char *s2 = " W";
+// 	char *s3 = ft_strtrim(s1,s2);
+
+// 	printf("%s\n",s3);
+// }

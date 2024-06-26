@@ -14,5 +14,15 @@
 
 int	ft_isprint(int c)
 {
-	return (c >= 33 && c <= 126);
+	return (c >= 32 && c <= 126);
 }
+// int main()
+// {	
+// 	int i;
+// 	i = 123;
+//     while (i <= 127)
+//     {
+//         printf("%d",ft_isprint(i));
+//         i++;
+//     }
+// }

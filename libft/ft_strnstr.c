@@ -12,33 +12,54 @@
 
 #include <stddef.h>
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t size)
-{
-	size_t	i;
-	size_t	j;
-	size_t	k;
+char *my_strnstr(const char *haystack, const char *needle, size_t size) {
 
-	i = 0;
+    size_t i;
+    int n_size;
+    size_t k; 
+    size_t j;
+
+	n_size = ft_strlen(needle) - 1;
 	j = 0;
-	k = ft_strlen(needle) - 1;
-	if (haystack == NULL || needle == NULL)
+    
+	if (!haystack || !needle)
 		return (NULL);
 	if (size > 0)
 	{
-		while (haystack[i] && i < size)
-		{
-			if (haystack[i] == needle[j])
-			{
-				if (j == k)
-				{
-					return ((char *)(haystack + (i - j)));
-					break ;
-				}
-				j++;
-			}
-			i++;
-		}
+		while (haystack[j] != '\0' && ((j + n_size) < size))
+    	{   
+        	i = 0;
+        	k = 0;
+        	while (haystack[j + i] == needle[k] && needle[k] != '\0')
+        	{
+            	i++;
+            	k++;
+            	if((int)k == n_size && size > 0)
+                	return((char *)&haystack[j]);   
+        	}
+        	j++;
+    	}
 	}
 	return (NULL);
 }
+
+
+// int main() {
+//     const char *haystack = "Hello world";
+//     const char *needle = " wor";
+//     size_t len = 30;
+
+//     char *result = ft_strnstr(haystack, needle, len);
+
+//     if (result) {
+//         printf("Found '%s' in '%s' within the first %zu characters: '%s'\n", needle, haystack, len, result);
+//     } else {
+//         printf("Substring '%s' not found in '%s' within the first %zu characters.\n", needle, haystack, len);
+//     }
+
+//     printf("%ld\n",ft_strlen(needle));
+
+//     return 0;
+// }

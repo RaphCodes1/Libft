@@ -20,7 +20,7 @@ BONUS_OBJS = $(BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rsc $(NAME) $(OBJS) $(CFLAGS)
+	ar rsc $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)

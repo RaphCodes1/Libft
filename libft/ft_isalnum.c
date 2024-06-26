@@ -16,3 +16,15 @@ int	ft_isalnum(int c)
 {
 	return (ft_isalpha (c) || ft_isdigit (c));
 }
+
+// int main()
+// {	
+// 	char i; 
+// 	i = '0';
+//     while (i <= '9')
+//     {
+//         printf("%d",ft_isalnum(i));
+//         i++;
+//     }
+
+// }
