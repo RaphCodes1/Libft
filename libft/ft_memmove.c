@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:53:22 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 17:41:26 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/26 13:58:17 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 	{
 		return (NULL);
 	}

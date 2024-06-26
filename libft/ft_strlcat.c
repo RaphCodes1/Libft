@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:05:29 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 18:06:46 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/26 16:53:20 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,29 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
+	size_t	src_len;
 
 	i = 0;
-	j = ft_strlen(src);
-	if (dstsize <= i)
-	{
-		return (j + dstsize);
-	}
+	src_len = ft_strlen(src);
+	// if (dstsize <= i)
+	// {
+	// 	return (src_len + dstsize);
+	// }
 	while (src[i] && (i < dstsize))
 	{
-		dst[i + j] = src[i];
+		dst[i + src_len] = src[i];
 		i++;
 	}
-	dst[i + j] = '\0';
-	return (i + j);
+	dst[i + src_len] = '\0';
+	return (i + src_len);
 }
+
+// int main()
+// {
+// 	char s1[20]= "Hello ";
+// 	char s2[] = "World";
+// 	size_t i = ft_strlcat(s2,s1,ft_strlen(s1));
+
+// 	printf("%zu\n",i);
+// 	printf("%s\n",s2);
+// }
