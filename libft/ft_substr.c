@@ -16,18 +16,35 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*dest;
+	unsigned int s1;
 
-	if (start == 0 || len == 0)
-		return (NULL);
-	dest = (char *)malloc(sizeof(char) * (len + 1));
+	s1 = ft_strlen(s);
+	if(!s)
+		return (0);
+	if(s1 < start)
+		len = 0;
+	if((s1 - start) < start)
+		len = 0;
+	dest = (char *)malloc(sizeof(char *) * (len + 1));
 	if (!dest)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	
+	while (s[i] && (i < len))
 	{
-		dest[i] = s[(start - 1) + i];
+		dest[i] = s[i + start];
 		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
+
+// int main()
+// {
+// 	char *str = "01234";
+//  	size_t size = 10;
+//  	char *ret = ft_substr(str, 10, size);
+
+// 	printf("%s\n",ret);
+
+// }
