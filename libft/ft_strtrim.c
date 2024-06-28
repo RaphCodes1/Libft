@@ -6,68 +6,43 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:17:30 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 18:20:01 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/28 17:21:21 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int length_i(char const *s1, char const *set, size_t i)
+char *ft_strtrim(char const *s1,char const *set)
 {
-	while (s1[i])
-	{
-		if (s1[i] == set[0])
-			break ;
-		i++;
+	size_t i;
+	size_t j;
+	char *res;
+	
+	res = 0;
+	if(s1 != 0 && set != 0)
+	{	
+		i = 0;
+		j = ft_strlen(s1);
+		while(s1[i] && ft_strchr(set,s1[i]))
+			i++;
+		while(s1[j - 1] && ft_strchr(set,s1[j - 1]) && j > i)
+			j--;
+		res = malloc(j - i + 1);
+		if(res == NULL)
+			return (NULL);
+		ft_strlcpy(res,&s1[i],j - i + 1); 
 	}
-	return (i);
+	return(res);
 }
-char *mal_func(char const *s1, char const *set)
-{	
-	char *rem;
-	if (!s1 || !set)
-		return (NULL);
-	rem = (char *)malloc(sizeof(char) * (ft_strlen(s1)));
-	if (!rem)
-		return (NULL);
-	return (rem);
-}
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t		j;
-	size_t		k;
-	size_t		l;
-	char		*rem;
-
-	rem = mal_func(s1,set);
-	l = 0;
-	k = length_i(s1, set, l);
-	while (s1[k])
-	{
-		if (s1[k] == set[(ft_strlen(set) - 1)])
-			break ;
-		k++;
-	}
-	l = 0;
-	while (l < (k - 1))
-	{
-		rem[l] = s1[l];
-		l++;
-	}
-	j = 0;
-	k++;
-	while (s1[k])
-		rem[l + j++] = s1[k++];
-	return (rem);
-}
-
 
 // int main()
 // {
-// 	char *s1 = "Hello World There";
-// 	char *s2 = " W";
-// 	char *s3 = ft_strtrim(s1,s2);
+// 	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !";
+//  	char *s2 = "hello there";
+//  	char *ret = ft_strtrim(s1, " \n\t");
+// 	char *ret2 = ft_strtrim(s2, "reh");
+// 	char *s3 = ft_strtrim("","");
 
-// 	printf("%s\n",s3);
+// 	printf("%s\n",ret);
 // }

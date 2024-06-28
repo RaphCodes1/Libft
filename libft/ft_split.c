@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:50:58 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 17:51:27 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/28 18:32:01 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	safe_malloc(char **token_v, int position, size_t length)
 	{
 		while (i < position)
 		{
-			free(token_v[i++]);
+			free(token_v[i]);
+			i++;
 			return (1);
 		}
 		free(token_v);
@@ -99,4 +100,9 @@ char	**ft_split(char const *s, char c)
 	if (fill(token_v, s, c))
 		return (NULL);
 	return (token_v);
+}
+int main()
+{	
+	char *s1 = "Hello there man !!!!!";
+	char **s1 = ft_split(s1,' ');
 }

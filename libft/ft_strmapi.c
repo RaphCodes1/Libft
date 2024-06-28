@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:09:00 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 18:10:54 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/28 17:50:39 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,27 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s)
 		return (NULL);
-	str = malloc (sizeof(char *) * (ft_strlen(s) + 1));
+	str = malloc ((ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
-	while (str[i])
+	while (s[i])
 	{
-		str[i] = (*f)(i, str[i]);
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
+char example(unsigned int i, char c)
+{
+	return(c + i);
+}
+// int main()
+// {
+// 	char *s1 = "hello world";
+	
+// 	char *result = ft_strmapi(s1,&example);
+// 	printf("%s\n",result);
+
+// 	free(result);
+// }

@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:05:29 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/26 16:53:20 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/06/28 17:09:44 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	k = 0;
-	if(dstsize == 0)
+	if(dstsize == 0 && dst == NULL)
 	{
 		while(src[i])
 			i++;
