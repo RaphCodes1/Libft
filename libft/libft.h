@@ -14,9 +14,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-// # include <stddef.h>
 # include <limits.h>
-// # include <stdint.h>
+# include <stdint.h>
 # include <stdio.h>
 
 typedef struct s_list
@@ -34,12 +33,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-
-/* Not included */
-// int ft_strcmp(const char *s1, const char *s2);
-// char *ft_strcat(char *restrict s1, const char *restrict s2);
-// char *ft_strncat(char *restrict s1, char *restrict s2, size_t n);
-// char *ft_strncpy(char *dest, const char *src, size_t n);
 
 /*CHARS*/
 int		ft_toupper(int c);
@@ -85,7 +78,7 @@ int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void ((*del)(void*)));
-void	ft_ft_lsdtclear(t_list **lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif

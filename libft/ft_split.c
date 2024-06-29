@@ -19,16 +19,16 @@ int	safe_malloc(char **token_v, int position, size_t length)
 	int	i;
 
 	i = 0;
-	token_v[position] = malloc(length * sizeof(char *));
+	token_v[position] = malloc(length);
 	if (token_v[position] == NULL)
 	{
 		while (i < position)
 		{
 			free(token_v[i]);
 			i++;
-			return (1);
 		}
 		free(token_v);
+		return (1);
 	}
 	return (0);
 }
@@ -54,6 +54,7 @@ int	fill(char **token_v, char const *s, char del)
 			if (safe_malloc(token_v, i, len + 1))
 				return (1);
 			ft_strlcpy(token_v[i], s - len, len + 1);
+			token_v[i][len] = '\0';
 		}
 		++i;
 	}
@@ -89,20 +90,20 @@ char	**ft_split(char const *s, char c)
 	char	**token_v;
 	int		token;
 
-	if (NULL == s)
+	if (s == NULL)
 		return (NULL);
 	token = 0;
 	token = count_tokens(s, c);
-	token_v = malloc(sizeof(char *) * (token + 1));
-	if (NULL == token_v)
+	token_v = (char **)malloc(sizeof(char *) * (token + 1));
+	if (token_v == NULL)
 		return (NULL);
 	token_v[token] = NULL;
 	if (fill(token_v, s, c))
 		return (NULL);
 	return (token_v);
 }
-int main()
-{	
-	char *s1 = "Hello there man !!!!!";
-	char **s1 = ft_split(s1,' ');
-}
+// int main()
+// {	
+// 	char *s1 = "Hello there man !!!!!";
+// 	char **s2 = ft_split("hello!",' ');
+// }
