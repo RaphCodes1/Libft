@@ -20,12 +20,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	while(*src && (i + 1) < dstsize)
 	{
 		*dst++ = *src++;
-		++i;
+		i++;
 	}
 	if(i < dstsize)
-		*dst = 0;
+		*dst = '\0';
 	while(*src++)
-		++i;
+		i++;
 	return (i);
 }
 
@@ -37,7 +37,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	size_t i = ft_strlcpy(s2,"aaa",3);
 
 // 	printf("%s\n, %zu",s2,i);
-	
-	
 	
 // }

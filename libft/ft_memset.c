@@ -29,9 +29,8 @@ void	*ft_memset(void *b, int c, size_t len)
 
 // int main()
 // {	
-// 	char mem[100];
-// 	if (mem != ft_memset(mem, '\n', 6))
-//         write(1, "mem's adress was not returned\n", 30);
-//     write(1, mem, 15);
+// 	char mem[20];
+// 	ft_memset(mem,'a',sizeof(mem));
+// 	printf("%s\n",mem);
 
 // }

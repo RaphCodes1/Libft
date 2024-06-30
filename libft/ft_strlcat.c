@@ -41,10 +41,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // int main()
 // {
-// 	char s1[20]= "Hello ";
-// 	char s2[] = "World";
-// 	size_t i = ft_strlcat(s2,s1,ft_strlen(s1));
+// 	char s1[20]= "Hello";
+// 	char s2[] = " World";
+// 	size_t i = ft_strlcat(s1,s2,sizeof(s1));
 
 // 	printf("%zu\n",i);
-// 	printf("%s\n",s2);
+// 	printf("%s\n",s1);
 // }
+

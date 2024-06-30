@@ -23,3 +23,11 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+// int main() {
+//     char s1[10] = "Hello";
+// 	size_t size = sizeof(s1);
+
+// 	printf("before: %s\n",s1);
+// 	ft_bzero(s1,size);
+// 	printf("after: %s\n",s1);
+// }

@@ -36,8 +36,8 @@ char	*ft_itoa(int n)
 	len = ft_numlen(n, 10);
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
-		return (0);
-	res[len] = 0;
+		return (NULL);
+	res[len] = '\0';
 	if (n == 0)
 		res[0] = '0';
 	else if (n < 0)

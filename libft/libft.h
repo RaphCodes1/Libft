@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <stdint.h>
 # include <stdio.h>
-
+# include <stddef.h>
 typedef struct s_list
 {
 	void			*content;
@@ -49,7 +49,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 void	*ft_calloc(size_t nmeb, size_t size);
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 
 /*is blank*/
 int		ft_isascii(int c);

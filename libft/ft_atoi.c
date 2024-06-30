@@ -41,7 +41,7 @@ int	ft_atoi(const char *nptr)
 
 // int main(void)
 // {	
-// 	char *t1 = "-+48";
+// 	char *t1 = "48";
 // 	printf("%d\n",ft_atoi(t1));
 // 	printf("%d\n",atoi(t1));
 // }

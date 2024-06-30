@@ -19,8 +19,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (size && nmemb > (SIZE_MAX / size))
 		return (NULL);
-	// if (nmemb == 0 && size == 0)
-	// 	return (NULL);
 	total_size = nmemb * size;
 	arr = malloc(total_size);
 	if (!arr)
@@ -31,13 +29,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 // int main(void)
 // {
-//     int *t1;
-//     // int num = 5;
+//     size_t num_el = 10;
+// 	int *arr = ft_calloc(num_el,sizeof(int));
+// 	size_t i = 0;
 
-//     t1 = calloc(SIZE_MAX,sizeof(int));
+// 	while(i < num_el)
+// 	{
+// 		printf("%d ",arr[i]);
+// 		i++;
+// 	}
 
-//     for (int i = 0; i < 30; i++)
-//     {
-//         printf("%d",t1[i]);
-//     }
+// 	free(arr);
 // }

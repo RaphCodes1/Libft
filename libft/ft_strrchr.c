@@ -19,7 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 	
 	i = 0;
 	res = NULL;
-	
+	if(c > INT_MAX)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
@@ -31,12 +32,12 @@ char	*ft_strrchr(const char *s, int c)
 	return (res);
 }
 
-// int main()
-// {
-// 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
-//  	char *d1 = strrchr(src, 'c');
-//  	char *d2 = ft_strrchr(src, 'c');
+int main()
+{
+	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+ 	char *d1 = strrchr(src, 'c');
+ 	char *d2 = ft_strrchr(src, 'c');
  
-//  	printf("%s\n%s",d1,d2);
+ 	printf("%s\n%s",d1,d2);
 
-// }
+}
