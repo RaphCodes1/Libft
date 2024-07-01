@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+// #include <string.h>
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
@@ -32,12 +32,12 @@ char	*ft_strrchr(const char *s, int c)
 	return (res);
 }
 
-int main()
-{
-	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
- 	char *d1 = strrchr(src, 'c');
- 	char *d2 = ft_strrchr(src, 'c');
+// int main()
+// {
+// 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+//  	char *d1 = strrchr(src, 'c');
+//  	char *d2 = ft_strrchr(src, 'c');
  
- 	printf("%s\n%s",d1,d2);
+//  	printf("%s\n%s",d1,d2);
 
-}
+// }

@@ -40,12 +40,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (dest);
 }
 
-int main()
-{
-	char *str = "01234";
- 	size_t size = 2;
- 	char *ret = ft_substr(str, 2, size);
+// int main()
+// {
+// 	char *str = "01234";
+//  	size_t size = 2;
+//  	char *ret = ft_substr(str, 2, size);
 
-	printf("%s\n",ret);
+// 	printf("%s\n",ret);
 
-}
+// }

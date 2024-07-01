@@ -25,3 +25,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+// void my_func(unsigned int c, char *s)
+// {
+// 	*s = *s + c;
+// }
+// int main()
+// {
+// 	char s1[] = "Hello there";
+// 	ft_striteri(s1,&my_func);
+	 
+// 	printf("%s\n",s1);
+
+// }

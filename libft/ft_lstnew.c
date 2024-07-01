@@ -23,3 +23,8 @@ t_list	*ft_lstnew(void *content)
 	node_new->next = NULL;
 	return (node_new);
 }
+// int main()
+// {
+// 	t_list *lst = ft_lstnew("hello");
+// 	printf("%s\n",(char *)lst->content);
+// }

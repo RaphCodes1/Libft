@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+// #include <string.h>
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t size) {
 
@@ -19,8 +19,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t size) {
     size_t j;
 
 	j = 0;
-    // if(size < 0)
-    //     return((char *)(haystack));  
 	if (!needle[0])
 		return ((char *)haystack);
 	if (!needle)

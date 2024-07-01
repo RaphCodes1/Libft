@@ -31,10 +31,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-char example(unsigned int i, char c)
-{
-	return(c + i);
-}
+// char example(unsigned int i, char c)
+// {
+// 	return(c + i);
+// }
 // int main()
 // {
 // 	char *s1 = "hello world";
