@@ -6,11 +6,12 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:56:30 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/28 17:58:22 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:35:45 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <string.h>
 char	*ft_strchr(const char *s, int c)
 {
@@ -35,7 +36,7 @@ char	*ft_strchr(const char *s, int c)
 // 	char src[] = "the cake is a lie !\0I'm hidden lol\r\n";
 //  	char *d1 = strchr(src, 'c');
 //  	char *d2 = ft_strchr(src, 'c');
- 
+
 //  	printf("%s\n%s",d1,d2);
 
 // }

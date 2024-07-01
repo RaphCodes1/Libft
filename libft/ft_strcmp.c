@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:57:58 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 17:59:12 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:35:53 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_strcmp(const char *s1, const char *s2)
 	int	i;
 
 	i = 0;
-	// if (s1 == NULL || s2 == NULL)
-	// 	return (0);
 	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);

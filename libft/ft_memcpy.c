@@ -6,12 +6,13 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:52:17 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/26 15:03:55 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:35:27 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;

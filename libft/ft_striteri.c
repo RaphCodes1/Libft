@@ -6,13 +6,13 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:00:36 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/26 13:43:52 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:35:59 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
@@ -33,7 +33,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // {
 // 	char s1[] = "Hello there";
 // 	ft_striteri(s1,&my_func);
-	 
+
 // 	printf("%s\n",s1);
 
 // }

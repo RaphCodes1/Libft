@@ -6,7 +6,7 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:44:23 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/26 13:40:36 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:35:04 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	while (i < n)
 	{
 		*(char *)(dest + i) = *(char *)(src + i);
-		if ((*(unsigned char *)(src + i) = (unsigned char)c))
+		if ((*(unsigned char *)(src + i) == (unsigned char)c))
 			return (dest);
 		i++;
 	}

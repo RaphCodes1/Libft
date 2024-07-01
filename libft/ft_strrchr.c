@@ -6,20 +6,21 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:15:16 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 18:16:34 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:36:32 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 // #include <string.h>
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	char *res;
-	
+	int		i;
+	char	*res;
+
 	i = 0;
 	res = NULL;
-	if(c > INT_MAX)
+	if (c > INT_MAX)
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -37,7 +38,7 @@ char	*ft_strrchr(const char *s, int c)
 // 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
 //  	char *d1 = strrchr(src, 'c');
 //  	char *d2 = ft_strrchr(src, 'c');
- 
+
 //  	printf("%s\n%s",d1,d2);
 
 // }

@@ -6,12 +6,11 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:06:39 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 16:10:34 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:34:09 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -26,7 +25,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node_new = malloc(sizeof(t_list));
 		if (!node_new)
 		{
-			ft_lstclear(&node_first,(*del));
+			ft_lstclear(&node_first, (*del));
 			return (NULL);
 		}
 		node_new->content = f(lst->content);

@@ -6,20 +6,19 @@
 /*   By: rcreer <rcreer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:11:02 by rcreer            #+#    #+#             */
-/*   Updated: 2024/06/25 18:11:55 by rcreer           ###   ########.fr       */
+/*   Updated: 2024/07/01 15:36:20 by rcreer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{	
-	unsigned int j;
-	size_t	i;
+{
+	unsigned int	j;
+	size_t			i;
 
 	i = 0;
-	
-	if(n == 0)
+	if (n == 0)
 		return (0);
 	while (s1[i] && s2[i] && s1[i] == s2[i] && i < (n - 1))
 		i++;
@@ -33,6 +32,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //  	size_t size = 6;
 
 // 	printf("%d\n",ft_strncmp(big,little,size));
-
 
 // }
